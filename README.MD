@@ -1,6 +1,6 @@
 # **Programación web**
 ## **Instituto Tecnológico de Nuevo Laredo**
-![LogoNLD](NLD.png)
+![LogoNLD](Recursos/NLD.png)
 
 **Nombre del alumno:** David Castillo Téllez
 

@@ -14,7 +14,7 @@ El modelo de cajas es el comportamiento de CSS que hace que todos los elementos 
 
 4. **El contenido**, en azul, es la parte interior del elemento, excluyendo el relleno.
 
-![Partes](../Partes.png)
+![Partes](Recursos/../../../Recursos/Partes.png)
 
 >[Partes](https://lenguajecss.com/css/modelo-de-cajas/que-es/)
 
