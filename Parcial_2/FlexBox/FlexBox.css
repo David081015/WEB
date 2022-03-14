@@ -1,0 +1,28 @@
+*{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ h2{
+    font-family: cursive;
+ }
+
+ .contendorflex {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     background-color: black;
+     text-align: center;
+     width: 100vw;
+     height: 100vh;
+ }
+
+ .cajaflex {
+     background-color: blueviolet;
+     width: 100px;
+     height: 100px;
+     margin: 10px;
+ }
