@@ -27,18 +27,18 @@
 
  @media screen and (max-width: 1200px) {
     .contenedor {
-        grid-template-columns: 50% 50% 50%;
-        grid-template: 50% 50% 50% 50%;
-        grid-template-areas: 'encabezado encabezado encabezado'
+        grid-template-columns: 50% 50%;
+        grid-template: 20% 80% 80% 20%;
+        grid-template-areas: 'encabezado encabezado'
                              'contenido1 contenido2'
-                             'contenido3' 
-                             'piepagina piepagina piepagina';
+                             'contenido3 contenido3' 
+                             'piepagina piepagina';
     }
 
     #encabezado {grid-area: encabezado; background-color: black; color: white;}
- #contenido1 {grid-area: contenido1; background-color: yellow;}
- #contenido2 {grid-area: contenido2; background-color: blue;}
- #contenido3 {grid-area: contenido3; background-color: red;}
- #piepagina  {grid-area: piepagina; background-color: black; color: white;}
+    #contenido1 {grid-area: contenido1; background-color: yellow;}
+    #contenido2 {grid-area: contenido2; background-color: blue;}
+    #contenido3 {grid-area: contenido3; background-color: red;}
+    #piepagina  {grid-area: piepagina; background-color: black; color: white;}
 
  }
