@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <link rel="stylesheet" href="css/Grid_JS.css">
+</head>
+<body>
+    <div id="Cont" class="contendor">
+        <div id="Caja1" class="caja">
+            <h3>Caja 1</h3>
+            <!--
+            <img src="Recursos/T.png">
+            -->
+        </div>
+        <div id="Caja2" class="caja">
+            <h3>Caja 2</h3>
+            <!--
+            <img src="Recursos/C.png">
+            -->
+        </div>
+        <div id="Caja3" class="caja">
+            <h3>Caja 3</h3>
+            <!--
+            <img src="Recursos/T.png">
+            -->
+        </div>
+        <div id="Caja4" class="caja">
+            <h3>Caja 4</h3>
+        </div>
+        <div id="Caja5" class="caja">
+            <h3>Caja 5</h3>
+            <!--
+            <img src="Recursos/T.png">
+            -->
+        </div>
+        <div id="Caja6" class="caja">
+            <h3>Caja 6</h3>
+            <!--
+            <img src="Recursos/C.png">
+            -->
+        </div>
+        <div id="Caja7" class="caja">
+            <h3>Caja 7</h3>
+            <!--
+            <img src="Recursos/C.png">
+            -->
+        </div>
+        <div id="Caja8" class="caja">
+            <h3>Caja 8</h3>
+        </div>
+        <div id="Caja9" class="caja">
+            <h3>Caja 9</h3>
+            <!--
+            <img src="Recursos/T.png">
+            -->
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById("Cont").addEventListener("click",function Funcion (evento){
+                console.log(evento.target.id);
+                if(document.getElementById(evento.target.id).classList.contains("caja")){
+                    document.getElementById(evento.target.id).classList.toggle("cajaRosa");
+                }
+                else{
+                    document.getElementById(evento.target.id).classList.toggle("cajaBlanca");
+                }
+
+                if(evento.target.id=="Caja9") {
+                    document.getElementById("Cont").removeEventListener("click", Funcion);
+                }
+            })
+        }
+    </script>
+</body>
+</html>
