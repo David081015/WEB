@@ -1,0 +1,56 @@
+* {
+    background-color: black;
+    font-family: "Permanent Marker", cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    text-align: center;
+}
+
+.gif{
+    width: 500px;
+    height: auto;
+  }
+
+.Contenedor {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.celda {
+    background-color: blueviolet;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px white;
+    border: 2px solid white;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 130px;
+}
+
+.Estado {
+    font-size: 50px;
+    color: blueviolet;
+    margin: 20px auto;
+}
+
+.Reiniciar {
+    background-color: blueviolet;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    color: black;
+    box-shadow: 2px 2px 2px 2px white;
+    border: 2px solid white;
+}
