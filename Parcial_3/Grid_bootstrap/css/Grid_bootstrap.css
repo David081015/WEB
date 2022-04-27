@@ -1,0 +1,31 @@
+* {
+    font-family: "Permanent Marker", cursive;
+}
+
+.head {
+    background-color: royalblue;
+}
+
+.col1{
+    background-color: aqua;
+}
+
+.col2{
+    background-color: blueviolet;
+}
+
+.col3{
+    background-color: blue;
+}
+
+.col4{
+    background: palevioletred;
+}
+
+.col5{
+    background-color: green;
+}
+
+.col6{
+    background: red;
+}
