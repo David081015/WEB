@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body, button {
+    background-image: url(https://wallpaperaccess.com/full/84248.png);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+label {
+    color: white;
+}
+
+#btn1 {
+    height: 200px;
+    width: 200px;
+    font-size: 60px;
+}
