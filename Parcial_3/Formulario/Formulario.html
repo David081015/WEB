@@ -84,6 +84,7 @@
         <button id="btn1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#M1" data-backdrop="static" data-keyboard="false">Modal</button>
         <button id="btn2" type="button" class="btn btn-primary">Modal JS + JQ </button>
         <button id="btn3" type="button" class="btn btn-primary">Alerta</button>
+        <button id="btn6" type="button" class="btn btn-primary">SweetAlert</button>
 
         <div id="Alerta" class="alert alert-primary collapse" role="alert">
             David Castillo Téllez - 19100158
@@ -151,6 +152,10 @@
                         swal("Se cancelo la acción");
                     }
                 });
+            });
+
+            $('#btn6').click(function() {
+                swal("Se disparo un modal con SweetAlert", "19100158", "success");
             });
         });
     </script>
