@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="css/Formulario.css">
     <title>Formulario</title>
 </head>
@@ -80,11 +81,15 @@
             </div>
         </fieldset>
 
-        <button style="position: absolute; left: 84%; top: 65%;" id="btn1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#M1">Modal</button>
+        <button id="btn1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#M1" data-backdrop="static" data-keyboard="false">Modal</button>
         <button id="btn2" type="button" class="btn btn-primary">Modal JS + JQ </button>
+        <button id="btn3" type="button" class="btn btn-primary">Alerta</button>
 
-        <div class="alert alert-primary collapse" role="alert">
-            A simple primary alert—check it out!
+        <div id="Alerta" class="alert alert-primary collapse" role="alert">
+            David Castillo Téllez - 19100158
+            <button id="btn4" type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
         </div>
 
     </form>
@@ -98,11 +103,11 @@
               </button>
             </div>
             <div class="modal-body">
-              <p>David Castillo Téllez - 19100158.</p>
+              <p>Se disparo un modal con bootstrap.</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Guardar cambios</button>
+              <button id="btn5" type="button" class="btn btn-primary">Guardar cambios</button>
             </div>
           </div>
         </div>
@@ -114,6 +119,34 @@
             $('#btn2').click(function() {
                 $('.modal-body p').text('Se disparo un modal con Js-Jq');
                 $('#M1').modal();
+            });
+
+            $('#btn3').click(function() {
+                $('#Alerta').show();
+            });
+
+            $('#btn4').click(function() {
+                $('#Alerta').hide();
+            });
+
+            $('#btn5').click(function() {
+                swal({
+                    title: "¿Está seguro de guardar la información?",
+                    text: "19100158",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                    if (willDelete) {
+                        swal("La información se salvo", {
+                        icon: "success",
+                        });
+                    } else {
+                        swal("Se cancelo la acción");
+                    }
+                });
+                $('#M1').modal('hide')
             });
         });
     </script>
