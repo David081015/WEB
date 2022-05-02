@@ -81,7 +81,12 @@
         </fieldset>
 
         <button style="position: absolute; left: 84%; top: 65%;" id="btn1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#M1">Modal</button>
-        <!-- <button id="btn2" type="button" class="btn btn-primary">Modal JS + JQ </button> -->
+        <button id="btn2" type="button" class="btn btn-primary">Modal JS + JQ </button>
+
+        <div class="alert alert-primary collapse" role="alert">
+            A simple primary alert—check it out!
+        </div>
+
     </form>
     <div id="M1" class="modal" data-backdrop="static" data-keyboard="false" tabindex="-1">
         <div class="modal-dialog">
@@ -104,13 +109,13 @@
       </div>
     </div>
 
-    <!-- <script> 
+    <script> 
         $(document).ready(function() {
             $('#btn2').click(function() {
                 $('.modal-body p').text('Se disparo un modal con Js-Jq');
                 $('#M1').modal();
             });
         });
-    </script> -->
+    </script>
 </body>
 </html>
