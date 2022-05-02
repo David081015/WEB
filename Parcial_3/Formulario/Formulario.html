@@ -116,8 +116,12 @@
 
     <script> 
         $(document).ready(function() {
+            $('#btn1').click(function() {
+                $('.modal-body p').text('Se disparo un modal con bootstrap.');
+            });
+
             $('#btn2').click(function() {
-                $('.modal-body p').text('Se disparo un modal con Js-Jq');
+                $('.modal-body p').text('Se disparo un modal con Js-Jq.');
                 $('#M1').modal();
             });
 
@@ -130,6 +134,7 @@
             });
 
             $('#btn5').click(function() {
+                $('#M1').modal('hide')
                 swal({
                     title: "¿Está seguro de guardar la información?",
                     text: "19100158",
@@ -146,7 +151,6 @@
                         swal("Se cancelo la acción");
                     }
                 });
-                $('#M1').modal('hide')
             });
         });
     </script>
