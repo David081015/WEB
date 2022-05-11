@@ -47,7 +47,7 @@ $(document).ready(function() {
                                                         // cuando cambie el status del objeto XMLHttpRequest
             
                 if (solicitud.readyState == 4 && solicitud.status == 200) {                 // La respueta esta lista
-                    document.getElementById("Form").innerHTML = solicitud.responseText;  // La propiedad responseText tiene la respuesta en texto
+                    document.getElementById("header").innerHTML = solicitud.responseText;  // La propiedad responseText tiene la respuesta en texto
             }};
             
             solicitud.open("GET", "Formulario.txt", true);

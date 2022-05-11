@@ -10,8 +10,9 @@ body, button {
     background-image: url(https://fondosmil.com/fondo/4858.jpg);
 }
 
-h1 {
+header {
     text-align: center;
+    font-size: 50px;
 }
 
 input {
