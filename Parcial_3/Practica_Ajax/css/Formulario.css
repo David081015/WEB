@@ -10,7 +10,7 @@ body, button {
     background-image: url(https://fondosmil.com/fondo/4858.jpg);
 }
 
-header {
+#header {
     text-align: center;
     font-size: 50px;
 }
