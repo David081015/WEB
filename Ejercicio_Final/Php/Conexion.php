@@ -1,6 +1,5 @@
 <?php
-//$_POST('variable');
-$id=2;
+$parid = $_POST['par1'];
 $hostname = 'localhost';
 $database = 'web_19100158';
 $username = 'root';
@@ -14,10 +13,9 @@ try {
     echo $e->getMessage();
     exit();
 }
-$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
+//$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 try{
-    $consultaSql = 'Select ID, NOMBRE, ALBUM from musica where id='.$id;
+    $consultaSql = 'Select * from musica where id='.$parid;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
