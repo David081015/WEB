@@ -3,18 +3,14 @@
     margin: 0;
     padding: 0;
     font-family: cursive;
-    color: white;
 }
 
-body, button {
-    background-image: url(https://fondosmil.com/fondo/4858.jpg);
+body {
+    background-image: 
+    url(https://images.wallpaperscraft.com/image/single/headphones_laptop_macbook_apple_107920_1440x900.jpg);
 }
 
 #header {
     text-align: center;
     font-size: 50px;
-}
-
-input {
-    color: black;
 }

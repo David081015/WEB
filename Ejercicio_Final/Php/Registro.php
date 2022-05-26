@@ -1,6 +1,13 @@
 <?php
-//Variable
-$id=$_POST['id'];
+//Variables
+$Nombre=$_POST['Nombre'];
+$FechaNac=$_POST['FechaNac'];
+$Nacionalidad=$_POST['Nacionalidad'];
+$Descripcion=$_POST['Descripcion'];
+$Album=$_POST['Album'];
+$Publicacion=$_POST['Publicacion'];
+$Cancion=$_POST['Cancion'];
+$Duracion=$_POST['Duracion'];
 //Conexion
 $hostname = 'localhost';
 $database = 'web_19100158';
@@ -17,16 +24,13 @@ try {
 }
 
 try{
-    $consultaSql = 'Select NOMBRE, NACIONALIDAD, FECHA_NACIMIENTO, 
-        DESCRIPCION, ALBUM, FECHA_PUBLICACION, CANCION, DURACION from musica where id='.$id;
+    $consultaSql = "CALL MUSICA('$Nombre','$Nacionalidad','$FechaNac','$Descripcion','$Album',
+    '$Publicacion','$Cancion','$Duracion')";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
-    $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     $consulta -> closeCursor();
 } catch(PDOException $e) {
     echo "Error de consulta";
     echo $e->getMessage();
 }
-
-echo json_encode($resultado);
 ?>
