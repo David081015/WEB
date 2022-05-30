@@ -102,6 +102,7 @@ $(document).ready(function() {
         $('#M3').modal('hide');
     });
 
+//FUNCION PARA MOSTRAR LOS DATOS
     function refrescar(objeto) {
         $('#Artista').val(objeto.NOMBRE);
         $('#Fecha').val(objeto.FECHA_NACIMIENTO);
