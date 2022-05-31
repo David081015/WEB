@@ -82,13 +82,13 @@ $(document).ready(function() {
                 swal("La información se elimino", {
                 icon: "success"
                 });
+                Formulario.reset();
+                btn3.disabled=true;
+                btn4.disabled=true;
             } else {
                 swal("Se cancelo la acción");
             }
         });
-        Formulario.reset();
-        btn3.disabled=true;
-        btn4.disabled=true;
     });
 
 //MODALES
