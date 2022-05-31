@@ -83,7 +83,6 @@ $(document).ready(function() {
     $('#btn7').click(function() {
         let ID = $('#idDes').val();
         $.post('./Php/Elimina.php',{id:ID});
-        swal("El registro se elimino", { icon: "success"});
         $('#M3').modal('hide');
     });
 
