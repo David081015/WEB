@@ -81,29 +81,15 @@ $(document).ready(function() {
     });
 
     $('#btn7').click(function() {
-        let ID = $('#idMusic3').val();
-        swal({
-            title: "¿Está seguro de eliminar la información?",
-            text: "19100158",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-            })
-            .then((willDelete) => {
-            if (willDelete) {
-                $.post('./Php/Elimina.php',{id:ID});
-                swal("La información se elimino", {
-                icon: "success"
-                });
-            } else {
-                swal("Se cancelo la acción");
-            }
-        });
+        let ID = $('#idDes').val();
+        $.post('./Php/Elimina.php',{id:ID});
+        swal("El registro se elimino", { icon: "success"});
         $('#M3').modal('hide');
     });
 
 //FUNCION PARA MOSTRAR LOS DATOS
     function refrescar(objeto) {
+        $('#idDes').val(objeto.ID);
         $('#Artista').val(objeto.NOMBRE);
         $('#Fecha').val(objeto.FECHA_NACIMIENTO);
         $('#Nacionalidad').val(objeto.NACIONALIDAD);

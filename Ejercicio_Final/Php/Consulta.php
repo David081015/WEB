@@ -17,7 +17,7 @@ try {
 }
 
 try{
-    $consultaSql = 'Select NOMBRE, NACIONALIDAD, FECHA_NACIMIENTO, 
+    $consultaSql = 'Select ID, NOMBRE, NACIONALIDAD, FECHA_NACIMIENTO, 
         DESCRIPCION, ALBUM, FECHA_PUBLICACION, CANCION, DURACION from musica where id='.$id;
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
