@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    //Botones desactivados
+    btn3.disabled=true;
+    btn4.disabled=true;
+    
     $('#btn1').click(function() {
         $('#M1').modal({backdrop: 'static', keyboard: false});
     });
@@ -26,6 +30,7 @@ $(document).ready(function() {
                 swal("La información se salvo", {
                 icon: "success"
                 });
+                Formulario.reset();
             } else {
                 swal("Se cancelo la acción");
             }
@@ -33,24 +38,7 @@ $(document).ready(function() {
     });
 
     $('#btn3').click(function() {
-        $('#M2').modal({backdrop: 'static', keyboard: false});
-    });
-
-    $('#btn4').click(function() {
-        $('#M3').modal({backdrop: 'static', keyboard: false});
-    });
-
-//MODALES
-    $('#btn5').click(function() {
-        let ID = $('#idMusic').val();
-        $.post('./Php/Consulta.php',{id:ID},function(data){
-            refrescar(data);
-        },'json');
-        $('#M1').modal('hide');
-    });
-
-    $('#btn6').click(function() {
-        let ID = $('#idMusic2').val();
+        let ID = $('#idDes').val();
         let Nom = $('#Artista').val();
         let Fec = $('#Fecha').val();
         let Nac = $('#Nacionalidad').val();
@@ -77,13 +65,41 @@ $(document).ready(function() {
                 swal("Se cancelo la acción");
             }
         });
-        $('#M2').modal('hide');
     });
 
-    $('#btn7').click(function() {
+    $('#btn4').click(function() {
         let ID = $('#idDes').val();
-        $.post('./Php/Elimina.php',{id:ID});
-        $('#M3').modal('hide');
+        swal({
+            title: "¿Está seguro de eliminar la información?",
+            text: "19100158",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            })
+            .then((willDelete) => {
+            if (willDelete) {
+                $.post('./Php/Elimina.php',{id:ID});
+                swal("La información se elimino", {
+                icon: "success"
+                });
+            } else {
+                swal("Se cancelo la acción");
+            }
+        });
+        Formulario.reset();
+        btn3.disabled=true;
+        btn4.disabled=true;
+    });
+
+//MODALES
+    $('#btn5').click(function() {
+        let ID = $('#idMusic').val();
+        $.post('./Php/Consulta.php',{id:ID},function(data){
+            refrescar(data);
+        },'json');
+        $('#M1').modal('hide');
+        btn3.disabled=false;
+        btn4.disabled=false;
     });
 
 //FUNCION PARA MOSTRAR LOS DATOS
